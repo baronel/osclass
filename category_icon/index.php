@@ -1,7 +1,7 @@
 <?php if ( ! defined('OC_ADMIN')) exit('Direct access is not allowed.');
 /*
 Plugin Name: Category icon
-Plugin URI: http://www.osclass.org/
+Plugin URI: https://github.com/panaionutwteh/osclass/tree/master/category_icon
 Description: This plugin add the category icon
 Version: 1.0.0
 Author: WTEH
@@ -141,9 +141,12 @@ function get_category_icon($categoryId)
 {
     $icon = DAOCategoryIcon::newInstance()->findByIconCategoryId($categoryId);
 
-    if (isset($icon['bs_image_name'])) {
-        return UPLOAD_PATH . $icon['bs_image_name'];
+    if(count($icon) > 0) {
+        foreach ($icon as $imgname) {
+            return UPLOAD_PATH . $imgname['bs_image_name'];
+        }
     }
+
     return 0;
 }
 
