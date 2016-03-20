@@ -1,0 +1,7 @@
+<?php
+    foreach(get_all_photo_gallery('asc') as $data){ ?>
+        echo get_photo_gallery_image_url($data['s_image']);
+        echo $data['s_title'];
+        echo $data['s_description'];
+    }
+?>
