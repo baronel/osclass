@@ -95,6 +95,10 @@ class DAOCategoryIcon extends DAO
     }
 
 
+    /**
+     * @param $id
+     * @return mixed
+     */
     public function deleteByIconId($id)
     {
         $cond = array(
@@ -104,11 +108,18 @@ class DAOCategoryIcon extends DAO
         return $this->delete($cond);
     }
 
+    /**
+     * @return mixed
+     */
     public function dropCategoriIconTable()
     {
         return $this->dao->query('DROP TABLE '.$this->getTableName());
     }
 
+    /**
+     * @param $sql
+     * @return bool
+     */
     public function importSql($sql)
     {
         return $this->dao->importSQL($sql);
