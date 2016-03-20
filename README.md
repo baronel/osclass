@@ -1,0 +1,2 @@
+# osclass
+Osclass plugin
