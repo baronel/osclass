@@ -1,4 +1,4 @@
-<h2 class="render-title"><?php _e('Category icon', 'google_analytics'); ?></h2>
+<h2 class="render-title"><?php _e('Category icon', 'category_icon'); ?></h2>
 <div class="category_icon_add_box">
     <div class="left">
         <form action="<?php echo osc_admin_render_plugin_url('category_icon/admin.php'); ?>" method="post"
